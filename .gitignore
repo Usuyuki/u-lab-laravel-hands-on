@@ -27,3 +27,6 @@ yarn-error.log
 
 # Mac OS
 .DS_Store
+
+# MySQL Workbench
+*.mwb.bak

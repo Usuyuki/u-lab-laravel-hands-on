@@ -40,7 +40,7 @@ Composerに関しては、動けばいいので、参考記事の方法以外で
 
 ##### 参考記事 
 
-[PHP Composer のインストールと使い方](https://www.webdesignleaves.com/pr/php/php_composer.php)
+[macOS に composer をインストールする](https://qiita.com/tomk79/items/e6e1db94ea8b661b1e86)
 
 ### 手順 3 
 
