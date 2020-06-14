@@ -28,7 +28,7 @@ class UserLocationController extends Controller
         $user = User::where('token', '=', $token)->first();
         \Log::debug('Userは'.$user);
         \Log::debug('Useridは'.$user->id);
-        $user_location = UserLocation::where('user_id', '=', $user->id)->first();
+        $user_location = UserLocation::where('user_id', '=', $user->id)->paginate(10);;
         //user_idが$userのlocationを取ってくる
         \Log::debug('userlocationは'.$user_location);
         //::はスコープ定義演算子 場所::中身
@@ -44,7 +44,12 @@ class UserLocationController extends Controller
 
         // hint where を使って、userを絞る
         //$user_location = UserLocation::paginate(10);
-        $user_location = UserLocation::where('user_id'.'='.$user_location)->paginate(10); // ぺーじねーしょんのしょりをする
+        /**
+         * ミスの原因備忘録
+         * where()←カッコの中はコンマ
+         * コンマが必要なところにピリオドを使ってエラにーなっているのに気づかず何時間も使ってしまった。
+         */
+        //$user_location = UserLocation::where('user_id'.'='.$user->id)->paginate(10); // ぺーじねーしょんのしょりをする
         //where(::前のuserlocation内のカラム.'='.カラムの中の値)のやつだけ取り出してpaginateする
 
         \Log::debug($user_location);
