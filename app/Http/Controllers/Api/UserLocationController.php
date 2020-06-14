@@ -22,7 +22,7 @@ class UserLocationController extends Controller
             // 空だったら処理中止
             return abort('401'); // 認証エラー
         }
-        // end Middleware で処理がいい
+        // end Middleware で処理がいい ↓ヒントの箇所はここから
 
         // start 処理を書く
 
