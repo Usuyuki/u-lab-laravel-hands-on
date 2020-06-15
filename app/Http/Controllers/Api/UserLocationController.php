@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class UserLocationController extends Controller
 {
     /**
-     * ユーザーの位置情報を取得   GETに該当
+     * ユーザーの位置情報を取得   GETに該当する
      */
     public function index(Request $request)
     {
@@ -22,7 +22,7 @@ class UserLocationController extends Controller
             // 空だったら処理中止
             return abort('401'); // 認証エラー
         }
-        // end Middleware で処理がいい ↓ヒントの箇所はここから
+        // end Middleware で処理がいい 
 
         // start 処理を書く
         $user = User::where('token', '=', $token)->first();
