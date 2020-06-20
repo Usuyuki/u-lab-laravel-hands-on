@@ -65,9 +65,7 @@ class UserLocationController extends Controller
         // end
 
 
-        return [
-            "data" => $user_location
-        ];
+        return $user_location;
     }
 
     /**
