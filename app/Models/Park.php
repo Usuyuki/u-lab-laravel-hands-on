@@ -22,5 +22,14 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Park extends Model
 {
-    //
+    /**
+     * The attributes that are mass assignable.
+     *
+     * 更新を許可するものを入れる
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name'
+    ];
 }
