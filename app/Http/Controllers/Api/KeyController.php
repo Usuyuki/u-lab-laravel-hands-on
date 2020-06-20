@@ -17,7 +17,7 @@ class KeyController extends Controller
      *
      * @param Request $request リクエスト
      */
-    public function generate(UserFormRequest $request)
+    public function generate(Request $request)  //userlocationcontrollerが元
     {
         $name = $request->name; // userの入力値の取得
         $uuid = Str::uuid(); // uuidの生成

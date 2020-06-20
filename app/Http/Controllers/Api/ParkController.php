@@ -16,7 +16,19 @@ class ParkController extends Controller
     public function show(Request $request, $id)
     {
         $park = Park::find($id);
+        $user_locations = $park->user_location;
 
-        return $park;
+        // 人数取得
+        $count = count($user_locations);
+        
+
+        return [
+            'data' => [
+                'id' => $park->id,
+                'name' => $park->name,
+                'count' => $count,
+                'people' => $user_locations
+            ]
+        ];
     }
 }

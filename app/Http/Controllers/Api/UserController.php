@@ -13,14 +13,6 @@ class UserController extends Controller
         // start Middleware で処理がいい
         $token = $request->header('X-API-TOKEN');
 
-        // $tokenが空か判定。
-        if (empty($token)) {
-            // 空だったら処理中止
-            return abort('401'); // 認証エラー
-        }
-        // end Middleware で処理がいい
-
-
         // DBから tokenが等しいものを拾ってくる
         $user = User::where('token', '=', $token)->first();
 

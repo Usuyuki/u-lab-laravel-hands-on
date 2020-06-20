@@ -18,10 +18,7 @@ class UserLocationController extends Controller
         $token = $request->header('X-API-TOKEN');
         \Log::debug($token);
         // $tokenが空か判定。
-        if (empty($token)) {
-            // 空だったら処理中止
-            return abort('401'); // 認証エラー
-        }
+
         // end Middleware で処理がいい 
 
         // start 処理を書く

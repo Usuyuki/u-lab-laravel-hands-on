@@ -35,17 +35,17 @@ use Illuminate\Support\Facades\Route;
 // 端末 API KEY 生成
 Route::post('/v1/key', 'Api\KeyController@generate');
 
-// Userデータの取得
-Route::get('/v1/user', 'Api\UserController@show');
+// Userデータの取得  鍵マークのついている所につける
+Route::get('/v1/user', 'Api\UserController@show')->middleware('exsit.token');
 
 // Userデータの更新
-Route::patch('/v1/user', 'Api\UserController@update');
+Route::patch('/v1/user', 'Api\UserController@update')->middleware('exsit.token');
 
 // 位置情報取得
-Route::get('/v1/user/location', 'Api\UserLocationController@index');
+Route::get('/v1/user/location', 'Api\UserLocationController@index')->middleware('exsit.token');
 
 // 位置情報更新
-Route::post('/v1/user/location', 'Api\UserLocationController@create');
+Route::post('/v1/user/location', 'Api\UserLocationController@create')->middleware('exsit.token');
 
 // 公園一覧取得
 Route::get('/v1/park', 'Api\ParkController@index');

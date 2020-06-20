@@ -27,4 +27,5 @@ class UserFormRequest extends FormRequest
             'name' => 'required|max:50'
         ];
     
+    }
 }
