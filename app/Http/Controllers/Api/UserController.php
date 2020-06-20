@@ -31,7 +31,7 @@ class UserController extends Controller
         ];
     }
 
-    public function update(Request $request)
+    public function update(USerFormRequest $request)
     {
         // start Middleware で処理がいい
         $token = $request->header('X-API-TOKEN');
