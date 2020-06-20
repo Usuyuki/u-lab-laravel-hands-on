@@ -133,6 +133,9 @@ paths:
       tags:
         - user
       summary: ユーザー位置情報取得API
+      description: |-
+        デフォルトでは、最新の位置情報から10件取得する。
+        認証中(X-API-TOKENの値のユーザー)のデータをとってきたい
       security:
         - ApiToken: []
       responses:
