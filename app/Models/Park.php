@@ -32,4 +32,8 @@ class Park extends Model
     protected $fillable = [
         'name'
     ];
+    public function user_location()
+    {
+        return $this->hasMany(UserLocation::class, 'park_id', 'id');    
+    }
 }
