@@ -26,7 +26,6 @@ class UserLocationController extends Controller
 
         $user_location = UserLocation::where('user_id', '=', $user->id)->paginate(10);;
         //user_idが$userのlocationを取ってくる
-        \Log::debug('userlocationは'.$user_location);
         //::はスコープ定義演算子 場所::中身
         //->はインスタンスプロパティとインスタントメソッドにアクセスする
         //=>は連想配列で使うやつ
