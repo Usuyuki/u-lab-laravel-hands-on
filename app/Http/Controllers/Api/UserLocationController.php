@@ -23,7 +23,8 @@ class UserLocationController extends Controller
 
         // start 処理を書く
         $user = User::where('token', '=', $token)->first();
-
+        \Log::debug('Userは'.$user);
+        \Log::debug('Useridは'.$user->id);
         $user_location = UserLocation::where('user_id', '=', $user->id)->paginate(10);;
         //user_idが$userのlocationを取ってくる
         \Log::debug('userlocationは'.$user_location);
