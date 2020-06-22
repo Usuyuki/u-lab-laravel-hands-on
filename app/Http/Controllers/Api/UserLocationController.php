@@ -20,7 +20,7 @@ class UserLocationController extends Controller
         // $tokenが空か判定。
 
         // end Middleware で処理がいい 
-
+        ///aaaa
         // start 処理を書く
         $user = User::where('token', '=', $token)->first();
         \Log::debug('Userは'.$user);
