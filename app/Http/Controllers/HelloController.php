@@ -93,8 +93,8 @@ class HelloController extends Controller
         foreach ($arr as $key => $value) {
             // $key = "data"
             // $value = ['abc', 'edf']
-            \Log::debug($key);
-            \Log::debug($value);
+   
+       
         }
 
         return "ok";
